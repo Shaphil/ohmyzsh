@@ -51,7 +51,7 @@ prompt_user_hostname() {
   local user=`whoami`
 
   if [[ "$USERNAME" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment green default "%(!.%{%F{yellow}%}.)%n@%m"
+    prompt_segment green black "%(!.%{%F{yellow}%}.)%n@%m"
   fi
 }
 
@@ -74,7 +74,7 @@ prompt_git() {
 }
 
 prompt_dir() {
-  prompt_segment blue white '%~'
+  prompt_segment blue black '%~'
 }
 
 # Status:
